@@ -13,23 +13,37 @@
 		<p>Enter your Government Gateway credentials to sign in.
 			You received these when you created your HMRC online account.</p>
 
+		<div class="error-summary">
+			<p>Error exist on this page, fix them!</p>
+		</div>
+
 		<form class="form" method="POST" action="createAccount" autocomplete="off">
 
-			<fieldset class="form-field-group row">
+			<fieldset class="form-field-group row error">
 				<label class="form-element-bold label--full-length" for="userID">User ID</label>
-				<span id="userID-error-message" class="error-notification" role="alert" data-input-name="userID">Some error message</span>
-				<input type="text" name="userID" id="userID" value="" class="form-control--block" aria-required="true" minlength="5" maxlength="50">
+				<span id="userID-error-message" class="error-message" role="alert" data-input-name="userID">Some error message</span>
+				<input type="text" name="userID" id="userID" value="" class="form-control--block form-control-3-4" aria-required="true" minlength="5" maxlength="50">
 			</fieldset>
 
-			<!--<div class="form-group">-->
-				<!--<label class="form-label-bold" for="email-address">-->
-				<!--Card number-->
-				<!--</label>-->
-				<!--<input type="text" id="email-address">-->
+			<fieldset class="form-field-group row error">
+				<label class="form-element-bold label--full-length" for="userID">Password</label>
+				<span id="password-error-message" class="error-message" role="alert" data-input-name="password">Some error message</span>
+				<input type="text" name="password" id="password" value="" class="form-control--block form-control-3-4" aria-required="true">
+			</fieldset>
 
-			<!--</div>-->
+			<div class="form-field-group row">
+				<button class="button" type="submit">Sign in</button>
+			</div>
 
 		</form>
+
+		<h2>Problems signing in</h2>
+		<ul>
+			<li><a id="registration" href="/government-gateway-registration-frontend/route?continue=%2Faccount&amp;origin=unknown" target="_self" data-sso="false" data-journey-click="sos_gg_login:gg_login_end:exit_create_new_gg_account">Don’t have a Government Gateway account</a></li>
+			<li><a id="forgotten-user-id" href="/government-gateway-lost-credentials-frontend/choose-your-account?continue=%2Faccount&amp;origin=unknown&amp;forgottenOption=userId" target="_self" data-sso="false" data-journey-click="sos_gg_login:gg_login_end:forgotten_user_id">Forgotten user ID</a></li>
+			<li><a id="forgotten-password" href="/government-gateway-lost-credentials-frontend/choose-your-account?continue=%2Faccount&amp;origin=unknown&amp;forgottenOption=password" target="_self" data-sso="false" data-journey-click="sos_gg_login:gg_login_end:forgotten_password">Forgotten password</a></li>
+			<li><a id="forgotten-user-id-and-password" href="/government-gateway-lost-credentials-frontend/choose-password-saved?continue=%2Faccount&amp;origin=unknown&amp;forgottenOption=userIdAndPassword" target="_self" data-sso="false" data-journey-click="sos_gg_login:gg_login_end:forgotten_user_id_and_password">Forgotten user ID and password</a></li>
+		</ul>
 	</div>
 
 	<div class="column-third">
