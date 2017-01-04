@@ -1,4 +1,5 @@
 .idea/
+_NHS_assets/
 .sass-cache
 .DS_Store
 .start.pid

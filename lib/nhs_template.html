@@ -52,7 +52,7 @@
         <div class="header-global">
           <div class="header-logo">
             <a href="/" title="{{ logo_link_title|default('Go to the GOV.UK homepage') }}" id="logo" class="content">
-                <img src="/public/images/nhs-rev-logotype.svg" alt="">
+                <img src="{{ asset_path }}images/nhs-rev-logotype.svg" alt="">
             </a>
           </div>
           {% block inside_header %}{% endblock %}
