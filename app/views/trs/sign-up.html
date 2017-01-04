@@ -21,25 +21,25 @@
 			<p>Errors exist on this page, fix them.</p>
 		</div>
 
-		<form class="form" method="GET" action="create-account" autocomplete="off">
+		<form class="form validate" method="GET" action="create-account" autocomplete="off" id="sign-in-form">
 
-			<fieldset class="form-field-group row">
+			<div class="form-field-group">
 				<div class="error-layer">
 					<label class="form-label-bold" for="userID">User ID</label>
-					<span id="userID-error-message" class="error-message" role="alert">Some error message</span>
-					<input type="text" name="userID" id="userID" value="" class="form-control" aria-required="true">
+					<span id="userID-error-message" class="error-message">Some error message</span>
+					<input type="text" name="userID" id="userID" value="" class="form-control">
 				</div>
-			</fieldset>
+			</div>
 
-			<fieldset class="form-field-group row">
+			<div class="form-field-group">
 				<div class="error-layer">
 					<label class="form-label-bold" for="password">Password</label>
-					<span id="password-error-message" class="error-message" role="alert">Some error message</span>
-					<input type="password" name="password" id="password" value="" class="form-control" aria-required="true">
+					<span id="password-error-message" class="error-message">Some error message</span>
+					<input type="password" name="password" id="password" value="" class="form-control">
 				</div>
-			</fieldset>
+			</div>
 
-			<div class="form-field-group row">
+			<div class="form-field-group">
 				<button class="button" type="submit">Sign in</button>
 			</div>
 
