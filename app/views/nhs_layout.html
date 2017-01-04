@@ -1,0 +1,20 @@
+{% extends "nhs_template.html" %}
+
+
+{% block page_title %}
+  NHS BSA Prototypes - TRS Access
+{% endblock %}
+
+{% block head %}
+  {% include "includes/head.html" %}
+{% endblock %}
+
+{% block cookie_message %}
+  <p>{{cookieText | safe }}</p>
+{% endblock %}
+
+
+
+{% block body_end %}
+  {% include "includes/scripts.html" %}
+{% endblock %}

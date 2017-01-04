@@ -1,0 +1,44 @@
+{% extends "nhs_layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/phase_banner_alpha.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-xlarge">Sign in</h1>
+
+		<p>Enter your Government Gateway credentials to sign in.
+			You received these when you created your HMRC online account.</p>
+
+		<form class="form" method="POST" action="createAccount" autocomplete="off">
+
+			<fieldset class="form-field-group row">
+				<label class="form-element-bold label--full-length" for="userID">User ID</label>
+				<span id="userID-error-message" class="error-notification" role="alert" data-input-name="userID">Some error message</span>
+				<input type="text" name="userID" id="userID" value="" class="form-control--block" aria-required="true" minlength="5" maxlength="50">
+			</fieldset>
+
+			<!--<div class="form-group">-->
+				<!--<label class="form-label-bold" for="email-address">-->
+				<!--Card number-->
+				<!--</label>-->
+				<!--<input type="text" id="email-address">-->
+
+			<!--</div>-->
+
+		</form>
+	</div>
+
+	<div class="column-third">
+
+
+
+	</div>
+
+	</div>
+</main>
+
+{% endblock %}
