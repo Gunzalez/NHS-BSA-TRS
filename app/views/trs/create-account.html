@@ -11,53 +11,60 @@
 		<h1 class="heading-xlarge">Create Account</h1>
 
 		<div class="error-summary">
-			<p>Error exist on this page, fix them!</p>
+			<p>Errors exist on this page, fix them.</p>
 		</div>
 
 		<form class="form" method="GET" action="" autocomplete="off">
 
 			<fieldset class="form-field-group row">
 				<div class="error-layer error">
-					<label class="form-element-bold label--full-length" for="userID">Email address</label>
-					<span id="userID-error-message" class="error-message" role="alert" data-input-name="userID">Some error message</span>
-					<input type="text" name="userID" id="userID" value="" class="form-control--block form-control-3-4" aria-required="true">
+					<label class="form-label-bold" for="userID">Email address</label>
+					<span id="userID-error-message" class="error-message" role="alert">Some error message</span>
+					<input type="text" name="userID" id="userID" value="" class="form-control" aria-required="true">
 				</div>
 			</fieldset>
 
 			<fieldset class="form-field-group row">
 				<div class="error-layer error">
-				<label class="form-element-bold label--full-length" for="userID">Create password</label>
-				<p class="form-hint">Your password must:</p>
-				<ul class="form-hint-list form-hint">
-					<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-one" data-hint-rule="^[A-Za-z0-9]{8,12}$" data-hint-rule-flag="i">
+				<label class="form-label-bold" for="userID">Create password</label>
+				<div class="form-hints">
+						<p class="form-hint">Your password must:</p>
+						<ul class="form-hint-list form-hint list-bullet">
+							<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-one" data-hint-rule="^[A-Za-z0-9]{8,12}$" data-hint-rule-flag="i">
         <span class="form-hint-list-item__primary">
             <span class="form-hint-list-item__indicator"></span>
         </span>
-						be between 8 and 12 characters (letters and numbers only, no special characters)
-					</li>
-					<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-two" data-hint-rule="[A-Za-z]+">
+								be between 8 and 12 characters (letters and numbers only, no special characters)
+							</li>
+							<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-two" data-hint-rule="[A-Za-z]+">
         <span class="form-hint-list-item__primary">
             <span class="form-hint-list-item__indicator"></span>
         </span>
-						contain at least one letter (a-z)
-					</li>
-					<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-three" data-hint-rule="[0-9]+">
+								contain at least one letter (a-z)
+							</li>
+							<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-three" data-hint-rule="[0-9]+">
         <span class="form-hint-list-item__primary">
             <span class="form-hint-list-item__indicator"></span>
         </span>
-						contain at least one number (0-9)
-					</li>
-					<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-four" data-hint-rule="^((?!password)[\S])+$" data-hint-rule-flag="i">
+								contain at least one number (0-9)
+							</li>
+							<li class="form-hint-list-item js-hint-password-rule" id="password-hint-rule-four" data-hint-rule="^((?!password)[\S])+$" data-hint-rule-flag="i">
         <span class="form-hint-list-item__primary">
             <span class="form-hint-list-item__indicator"></span>
         </span>
-						not contain the word 'password'
-					</li>
-				</ul>
-				<span id="password-error-message" class="error-message" role="alert" data-input-name="password">Some error message</span>
-				<input type="password" name="password" id="password" value="" class="form-control--block form-control-3-4" aria-required="true">
+								not contain the word 'password'
+							</li>
+						</ul>
+					</div>
+				<span id="password-error-message" class="error-message" role="alert">Some error message</span>
+				<input type="password" name="password" id="password" value="" class="form-control" aria-required="true">
+
+				<label class="form-label-bold" for="password-confirm">Confirm password</label>
+				<span id="password-confirm-error-message" class="error-message" role="alert">Some error message</span>
+				<input type="password" name="password-confirm" id="password-confirm" class="form-control" required="" aria-required="true">
 				</div>
 			</fieldset>
+
 
 			<div class="form-field-group row">
 				<button class="button" type="submit">Continue</button>
