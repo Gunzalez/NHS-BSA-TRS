@@ -6,14 +6,12 @@
 {% endblock %}
 
 {% block head %}
-  {% include "includes/head.html" %}
+  {% include "includes/nhs-head.html" %}
 {% endblock %}
 
 {% block cookie_message %}
   <p>{{cookieText | safe }}</p>
 {% endblock %}
-
-
 
 {% block body_end %}
   {% include "includes/scripts.html" %}

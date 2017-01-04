@@ -17,18 +17,22 @@
 			<p>Error exist on this page, fix them!</p>
 		</div>
 
-		<form class="form" method="POST" action="createAccount" autocomplete="off">
+		<form class="form" method="GET" action="create-account" autocomplete="off">
 
-			<fieldset class="form-field-group row error">
-				<label class="form-element-bold label--full-length" for="userID">User ID</label>
-				<span id="userID-error-message" class="error-message" role="alert" data-input-name="userID">Some error message</span>
-				<input type="text" name="userID" id="userID" value="" class="form-control--block form-control-3-4" aria-required="true" minlength="5" maxlength="50">
+			<fieldset class="form-field-group row">
+				<div class="error-layer error">
+					<label class="form-element-bold label--full-length" for="userID">User ID</label>
+					<span id="userID-error-message" class="error-message" role="alert" data-input-name="userID">Some error message</span>
+					<input type="text" name="userID" id="userID" value="" class="form-control--block form-control-3-4" aria-required="true">
+				</div>
 			</fieldset>
 
-			<fieldset class="form-field-group row error">
-				<label class="form-element-bold label--full-length" for="userID">Password</label>
-				<span id="password-error-message" class="error-message" role="alert" data-input-name="password">Some error message</span>
-				<input type="text" name="password" id="password" value="" class="form-control--block form-control-3-4" aria-required="true">
+			<fieldset class="form-field-group row">
+				<div class="error-layer error">
+					<label class="form-element-bold label--full-length" for="userID">Password</label>
+					<span id="password-error-message" class="error-message" role="alert" data-input-name="password">Some error message</span>
+					<input type="password" name="password" id="password" value="" class="form-control--block form-control-3-4" aria-required="true">
+				</div>
 			</fieldset>
 
 			<div class="form-field-group row">
