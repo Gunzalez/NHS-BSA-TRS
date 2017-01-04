@@ -67,7 +67,7 @@ input {
 
 
 .form-hints {
-  padding: 0.5em 0;
+  padding-bottom: 0.5em;
 
   ul {
     padding-top: 0.5em;
@@ -76,6 +76,29 @@ input {
 
 input + label {
   padding-top: 1em;
+}
+
+// errors
+.error-summary {
+  display: none;
+  &.error {
+    display: block;
+  }
+}
+
+.error-layer {
+  .error-message {
+    display: none;
+  }
+  &.error {
+    .error-message {
+      display: block;
+    }
+  }
+}
+
+.text-container {
+  padding-bottom: 1em;
 }
 
 

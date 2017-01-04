@@ -10,8 +10,12 @@
 
 		<h1 class="heading-xlarge">Sign in</h1>
 
-		<p>Enter your Government Gateway credentials to sign in.
-			You received these when you created your HMRC online account.</p>
+		<div class="text-container">
+
+			<p>Enter your Government Gateway credentials to sign in.
+				You received these when you created your HMRC online account.</p>
+		</div>
+
 
 		<div class="error-summary">
 			<p>Errors exist on this page, fix them.</p>
@@ -20,7 +24,7 @@
 		<form class="form" method="GET" action="create-account" autocomplete="off">
 
 			<fieldset class="form-field-group row">
-				<div class="error-layer error">
+				<div class="error-layer">
 					<label class="form-label-bold" for="userID">User ID</label>
 					<span id="userID-error-message" class="error-message" role="alert">Some error message</span>
 					<input type="text" name="userID" id="userID" value="" class="form-control" aria-required="true">
@@ -28,8 +32,8 @@
 			</fieldset>
 
 			<fieldset class="form-field-group row">
-				<div class="error-layer error">
-					<label class="form-label-bold" for="userID">Password</label>
+				<div class="error-layer">
+					<label class="form-label-bold" for="password">Password</label>
 					<span id="password-error-message" class="error-message" role="alert">Some error message</span>
 					<input type="password" name="password" id="password" value="" class="form-control" aria-required="true">
 				</div>
