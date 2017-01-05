@@ -10,7 +10,9 @@ p {
   line-height: 130% !important;
 }
 
-
+.display-none {
+  display: none;
+}
 
 
 
@@ -79,19 +81,12 @@ input + label {
 }
 
 // errors
-.error-summary {
-  display: none;
-  &.error {
-    display: block;
-  }
-}
-
 .error-layer {
   .error-message {
     display: none;
   }
-  &.error {
-    .error-message {
+  .error-message {
+    &.error {
       display: block;
     }
   }

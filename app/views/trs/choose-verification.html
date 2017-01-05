@@ -1,0 +1,45 @@
+{% extends "nhs-layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/phase_banner_alpha.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-xlarge">How would you like to get your access code?</h1>
+
+		<form class="form validate" method="GET" action="" autocomplete="off" id="choose-verification-form">
+
+
+			<div class="error-summary display-none">
+				<p>Errors exist on this page, fix them.</p>
+			</div>
+
+
+
+
+			<div class="form-field-group">
+				<button class="button" type="submit">Continue</button>
+			</div>
+
+		</form>
+
+
+
+
+
+
+	</div>
+
+	<div class="column-third">
+
+
+
+	</div>
+
+	</div>
+</main>
+
+{% endblock %}

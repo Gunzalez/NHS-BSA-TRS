@@ -32,6 +32,11 @@ $(document).ready(function () {
     var reportError = function ($obj) {
         var $errorLayer = $obj.parents('.error-layer');
         $errorLayer.addClass('error');
+        $('.error-message', $errorLayer).removeClass('display-none');
+    };
+
+    var reportFormError = function ($form) {
+        $('.error-summary', $form).removeClass('display-none');
     };
 
     var hasErrorsInField = function ($field) {
@@ -43,9 +48,10 @@ $(document).ready(function () {
         }
     };
 
-    var clearErrors = function () {
-        $('.error').removeClass('error');
-        $('.error-summary').removeClass('error');
+    var clearErrors = function ($form) {
+        $('.error', $form).removeClass('error');
+        $('.error-summary', $form).addClass('display-none');
+        $('.error-message', $form).addClass('display-none');
     };
 
     var $formsToValidate = $('.form.validate');
@@ -54,23 +60,36 @@ $(document).ready(function () {
 
         $form.on('submit', function (evt) {
             evt.preventDefault();
-            clearErrors();
+
+            clearErrors($form);
             $form.data('errors', false);
 
             if($form.attr("id") == "sign-in-form"){
-                var $userId = $('#userID', $form);
-                if(hasErrorsInField($userId)){
+                if(hasErrorsInField($('#userID', $form))){
                     $form.data('errors', true);
                 }
 
-                var $password = $('#password', $form);
-                if(hasErrorsInField($password)){
+                if(hasErrorsInField($('#password', $form))){
+                    $form.data('errors', true);
+                }
+            }
+
+            if($form.attr("id") == "create-account-form"){
+                if(hasErrorsInField($('#email-address', $form))){
+                    $form.data('errors', true);
+                }
+
+                if(hasErrorsInField($('#password', $form))){
+                    $form.data('errors', true);
+                }
+
+                if(hasErrorsInField($('#password-confirm', $form))){
                     $form.data('errors', true);
                 }
             }
 
             if($form.data('errors')){
-                $('.error-summary').addClass('error');
+                reportFormError($form);
             } else {
                 location.assign($form.attr('action'));
             }
