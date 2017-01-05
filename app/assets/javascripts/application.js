@@ -88,6 +88,19 @@ $(document).ready(function () {
                 }
             }
 
+            if($form.attr("id") == "choose-verification-form") {
+
+                var choice = $("input[name='access-code']:checked").val();
+                if(choice !== undefined){
+                    location.assign(choice);
+                    return false;
+                } else {
+                    $('.error-layer', $form).addClass('error');
+                    $('.error-message', $form).removeClass('display-none');
+                    $form.data('errors', true);
+                }
+            }
+
             if($form.data('errors')){
                 reportFormError($form);
             } else {

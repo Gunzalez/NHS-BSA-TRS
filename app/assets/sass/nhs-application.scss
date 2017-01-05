@@ -65,12 +65,17 @@ input + label {
   padding-top: 1em;
 }
 
-
 .error,
 .error-summary {
   border-width: 3px !important;
   .form-control {
     border-width: 3px !important;
+  }
+}
+
+.error {
+  .selection-button-radio::before{
+    border-color: #b10e1e !important;
   }
 }
 

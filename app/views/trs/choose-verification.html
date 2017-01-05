@@ -10,30 +10,34 @@
 
 		<h1 class="heading-large">How would you like to get your access code?</h1>
 
-		<form class="form validate" method="GET" action="" autocomplete="off" id="choose-verification-form">
+		<form class="form validate" method="GET" action="mobile-phone" autocomplete="off" id="choose-verification-form">
 
 			<div class="error-summary display-none">
 				<p>Errors exist on this page, fix them.</p>
 			</div>
 
             <div class="form-group">
-                <fieldset>
+                <div class="error-layer">
+                    <fieldset>
 
-                    <legend class="visuallyhidden">
-                        Select one option
-                    </legend>
+                        <legend class="visuallyhidden">
+                            Select one option
+                        </legend>
 
-                    <label for="mobile-phone" class="block-label selection-button-radio">
-                        <input id="mobile-phone" type="radio" name="access-code" value="mobile phone">
-                        Mobile phone
-                    </label>
+                        <span id="email-address-error-message" class="error-message display-none" role="alert">Some error message</span>
 
-                    <label for="landline" class="block-label selection-button-radio">
-                        <input id="landline" type="radio" name="access-code" value="landline">
-                        Landline
-                    </label>
+                        <label for="mobile-phone" class="block-label selection-button-radio">
+                            <input id="mobile-phone" type="radio" name="access-code" class="form-control" value="mobile-phone">
+                            Mobile phone
+                        </label>
 
-                </fieldset>
+                        <label for="landline" class="block-label selection-button-radio">
+                            <input id="landline" type="radio" name="access-code" class="form-control" value="landline">
+                            Landline
+                        </label>
+
+                    </fieldset>
+                </div>
             </div>
 
 
