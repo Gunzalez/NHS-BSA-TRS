@@ -1,0 +1,50 @@
+{% extends "nhs-layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/phase_banner_alpha.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-large">Enter your access code</h1>
+
+        <p>We sent a 6 digit access code <strong>0780 211 1919</strong></p>
+
+		<p>It may take a few minutes to arrive</p>
+
+		<form class="form validate" method="GET" action="verification-set" autocomplete="off" id="access-code-form">
+
+			<div class="error-summary display-none">
+				<p>Errors exist on this page, fix them.</p>
+			</div>
+
+            <div class="form-field-group">
+                <div class="error-layer">
+                    <label class="form-label-bold" for="access-code">Access code</label>
+                    <span id="access-code-error-message" class="error-message display-none" role="alert">Some error message</span>
+                    <input type="text" name="access-code" id="access-code" value="" class="form-control" aria-required="true">
+                </div>
+            </div>
+
+			<div class="form-field-group">
+				<button class="button" type="submit">Continue</button>
+			</div>
+
+		</form>
+
+		<p><a href="#">I didn't receive my access code</a></p>
+
+	</div>
+
+	<div class="column-third">
+
+
+
+	</div>
+
+	</div>
+</main>
+
+{% endblock %}

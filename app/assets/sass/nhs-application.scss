@@ -49,13 +49,11 @@ $nhs-blue:          #0072C6;
 }
 
 
+.form-hint {
+  margin: 0;
+}
 .form-hints {
   padding-bottom: 0.5em;
-
-  .form-hint {
-    margin: 0;
-  }
-
   ul {
     padding-top: 0.5em;
   }

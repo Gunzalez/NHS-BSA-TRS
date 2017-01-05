@@ -1,0 +1,47 @@
+{% extends "nhs-layout.html" %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/phase_banner_alpha.html" %}
+
+<div class="grid-row">
+	<div class="column-two-thirds">
+
+		<h1 class="heading-large">Enter your mobile phone number</h1>
+
+        <p>We will send your access code to this number by text message</p>
+
+		<form class="form validate" method="GET" action="access-code" autocomplete="off" id="mobile-phone-form">
+
+			<div class="error-summary display-none">
+				<p>Errors exist on this page, fix them.</p>
+			</div>
+
+            <div class="form-field-group">
+                <div class="error-layer">
+                    <label class="form-label-bold" for="mobile-phone">Mobile phone number</label>
+                    <p class="form-hint">This needs to be a number which you will always have access to</p>
+                    <span id="mobile-phone-error-message" class="error-message display-none" role="alert">Some error message</span>
+                    <input type="text" name="mobile-phone" id="mobile-phone" value="" class="form-control" aria-required="true">
+                </div>
+            </div>
+
+			<div class="form-field-group">
+				<button class="button" type="submit">Send my access code</button>
+			</div>
+
+		</form>
+
+	</div>
+
+	<div class="column-third">
+
+
+
+	</div>
+
+	</div>
+</main>
+
+{% endblock %}

@@ -101,6 +101,18 @@ $(document).ready(function () {
                 }
             }
 
+            if($form.attr('id') == 'mobile-phone-form'){
+                if(hasErrorsInField($('#mobile-phone', $form))){
+                    $form.data('errors', true);
+                }
+            }
+
+            if($form.attr('id') == 'access-code-form'){
+                if(hasErrorsInField($('#access-code', $form))){
+                    $form.data('errors', true);
+                }
+            }
+
             if($form.data('errors')){
                 reportFormError($form);
             } else {
