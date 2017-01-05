@@ -34,6 +34,15 @@ $(document).ready(function () {
         $errorLayer.addClass('error');
     };
 
+    var hasErrorsInField = function ($field) {
+        if($.trim($field.val()) == ""){
+            reportError($field);
+            return true;
+        } else  {
+            return false
+        }
+    };
+
     var clearErrors = function () {
         $('.error').removeClass('error');
         $('.error-summary').removeClass('error');
@@ -46,26 +55,24 @@ $(document).ready(function () {
         $form.on('submit', function (evt) {
             evt.preventDefault();
             clearErrors();
-            $form.data('error', false);
+            $form.data('errors', false);
 
             if($form.attr("id") == "sign-in-form"){
                 var $userId = $('#userID', $form);
-                if($.trim($userId.val()) == ""){
-                    reportError($userId);
-                    $form.data('error', true);
+                if(hasErrorsInField($userId)){
+                    $form.data('errors', true);
                 }
 
                 var $password = $('#password', $form);
-                if($.trim($password.val()) == ""){
-                    reportError($password);
-                    $form.data('error', true);
+                if(hasErrorsInField($password)){
+                    $form.data('errors', true);
                 }
             }
 
-            if(!$form.data('error')){
-                location.assign($form.attr('action'));
-            } else {
+            if($form.data('errors')){
                 $('.error-summary').addClass('error');
+            } else {
+                location.assign($form.attr('action'));
             }
         })
     })
