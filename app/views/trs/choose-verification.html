@@ -8,16 +8,33 @@
 <div class="grid-row">
 	<div class="column-two-thirds">
 
-		<h1 class="heading-xlarge">How would you like to get your access code?</h1>
+		<h1 class="heading-large">How would you like to get your access code?</h1>
 
 		<form class="form validate" method="GET" action="" autocomplete="off" id="choose-verification-form">
-
 
 			<div class="error-summary display-none">
 				<p>Errors exist on this page, fix them.</p>
 			</div>
 
+            <div class="form-group">
+                <fieldset>
 
+                    <legend class="visuallyhidden">
+                        Select one option
+                    </legend>
+
+                    <label for="mobile-phone" class="block-label selection-button-radio">
+                        <input id="mobile-phone" type="radio" name="access-code" value="mobile phone">
+                        Mobile phone
+                    </label>
+
+                    <label for="landline" class="block-label selection-button-radio">
+                        <input id="landline" type="radio" name="access-code" value="landline">
+                        Landline
+                    </label>
+
+                </fieldset>
+            </div>
 
 
 			<div class="form-field-group">

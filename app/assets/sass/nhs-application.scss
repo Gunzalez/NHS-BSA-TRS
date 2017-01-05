@@ -3,13 +3,6 @@ $nhs-blue:          #0072C6;
 
 
 
-
-p {
-  margin: 0 !important;
-  padding: 0 !important;
-  line-height: 130% !important;
-}
-
 .display-none {
   display: none;
 }
@@ -45,18 +38,6 @@ p {
   }
 }
 
-input {
-  border: 2px solid #6f777b;
-  margin: 0;
-  padding: 0.1em 0 0.1em 0.4em;
-  box-sizing: border-box;
-
-  &:focus {
-    outline: 3px solid #ffbf47;
-    outline-offset: -3px;
-  }
-}
-
 .form {
   padding-bottom: 2em;
 }
@@ -71,6 +52,10 @@ input {
 .form-hints {
   padding-bottom: 0.5em;
 
+  .form-hint {
+    margin: 0;
+  }
+
   ul {
     padding-top: 0.5em;
   }
@@ -80,20 +65,14 @@ input + label {
   padding-top: 1em;
 }
 
-// errors
-.error-layer {
-  .error-message {
-    display: none;
-  }
-  .error-message {
-    &.error {
-      display: block;
-    }
+
+.error,
+.error-summary {
+  border-width: 3px !important;
+  .form-control {
+    border-width: 3px !important;
   }
 }
 
-.text-container {
-  padding-bottom: 1em;
-}
 
 
