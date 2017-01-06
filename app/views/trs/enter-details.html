@@ -8,15 +8,25 @@
 <div class="grid-row">
 	<div class="column-two-thirds">
 
-		<h1 class="heading-large">Enter your details</h1>
+		<h1 class="heading-large">Confirm your identity<br />
+		<span>Enter your details</span></h1>
 
-		<form action="/" method="post" class="form validate" id="enter-details-form">
+		<div class="text-container">
+			<p>This will help us confirm who you are, so we know what questions to ask you.</p>
+		</div>
+
+		<form action="processing" method="post" class="form validate" id="enter-details-form" autocomplete="off">
+
+			<div class="error-summary display-none">
+				<p>Errors exist on this page, fix them.</p>
+			</div>
 
 			<!-- First name -->
 			<div class="form-group">
 				<div class="error-layer">
 					<label class="form-label-bold" for="first-name">Full name</label>
-					<input type="text" class="form-control" id="first-name">
+					<span id="first-name-error-message" class="error-message display-none" role="alert">Some error message</span>
+					<input type="text" class="form-control" id="first-name" name="first-name">
 				</div>
 			</div>
 
@@ -24,7 +34,8 @@
 			<div class="form-group">
 				<div class="error-layer">
 					<label class="form-label-bold" for="last-name">Last name</label>
-					<input type="text" class="form-control" id="last-name">
+					<span id="last-name-error-message" class="error-message display-none" role="alert">Some error message</span>
+					<input type="text" class="form-control" id="last-name" name="last-name">
 				</div>
 			</div>
 
@@ -37,7 +48,8 @@
 							<br>For example, 'VO 12 34 56 D'.
 						</span>
 					</label>
-					<input type="text" class="form-control" id="ni-number">
+					<span id="ni-number-error-message" class="error-message display-none" role="alert">Some error message</span>
+					<input type="text" class="form-control" id="ni-number" name="ni-number">
 				</div>
 			</div>
 
@@ -52,19 +64,21 @@
 
 							<p class="form-hint">For example, 31 3 1980</p>
 
+							<span id="dob-error-message" class="error-message display-none" role="alert">Some error message</span>
+
 							<div class="form-group form-group-day">
 								<label for="dob-day">Day</label>
-								<input class="form-control" id="dob-day" type="number" pattern="[0-9]*" min="0" max="31">
+								<input class="form-control" id="dob-day" name="dob-day" type="text">
 							</div>
 
 							<div class="form-group form-group-month">
 								<label for="dob-month">Month</label>
-								<input class="form-control" id="dob-month" type="number" pattern="[0-9]*" min="0" max="12">
+								<input class="form-control" id="dob-month" name="dob-month" type="text">
 							</div>
 
 							<div class="form-group form-group-year">
 								<label for="dob-year">Year</label>
-								<input class="form-control" id="dob-year" type="number" pattern="[0-9]*" min="0" max="2014">
+								<input class="form-control" id="dob-year" name="dob-year" type="text">
 							</div>
 						</div>
 

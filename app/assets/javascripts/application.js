@@ -113,6 +113,25 @@ $(document).ready(function () {
                 }
             }
 
+            if($form.attr('id') == 'enter-details-form'){
+                if(hasErrorsInField($('#first-name', $form))){
+                    $form.data('errors', true);
+                }
+
+                if(hasErrorsInField($('#last-name', $form))){
+                    $form.data('errors', true);
+                }
+
+                if(hasErrorsInField($('#ni-number', $form))){
+                    $form.data('errors', true);
+                }
+
+                if(hasErrorsInField($('#dob-year', $form))){
+                    $form.data('errors', true);
+                }
+
+            }
+
             if($form.data('errors')){
                 reportFormError($form);
             } else {
